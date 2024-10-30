@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solwer</title>
+    <style>
+        .container {
+            margin-top: 60px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .vechilereport {
+            width: 85%;
+        }
+
+        .vechilereport h1 {
+            width: 60%;
+            padding: 10px 10px 10px 90px;
+            font-size: 36px;
+            font-weight: 900;
+            background: #008CA8;
+            color: white;
+        }
+
+        .logo {
+            width: 50%;
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 80px;
+        }
+
+        .vehicleid {
+            padding-left: 90px;
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        .damagelist {
+            list-style: none;
+            padding-left: 90px;
+            display: flex;
+            gap: 50px;
+        }
+
+        .damagelist li {
+            position: relative;
+            padding-left: 40px;
+            font-size: 24px;
+        }
+
+        .damagelist li::before,
+        .viewlist li::before {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: blue;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .damagelist li.major::before {
+            background-color: red;
+        }
+
+        .frontback,
+        .sideview {
+            display: flex;
+        }
+
+        .front,
+        .back,
+        .left,
+        .right {
+            width: 50%;
+            margin-top: 70px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #008CA8;
+            font-size: 18px;
+            font-weight: 900;
+        }
+
+        .front img,
+        .back img,
+        .right img,
+        .left img {
+            margin: 40px 0px;
+        }
+
+        .frontbtn,
+        .backbtn,
+        .leftbtn,
+        .rightbtn {
+            width: 30%;
+            border: 2px solid #28A745;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .viewlist {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding-left: 120px;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        .viewlist li {
+            position: relative;
+            padding-left: 40px;
+            font-size: 24px;
+        }
+
+        .viewlist li.red::before {
+            background-color: #FF0000;
+        }
+
+        .viewlist li.red {
+            color: #FF0000;
+        }
+
+        .viewlist li.blue::before {
+            background-color: #0000FF;
+        }
+
+        .viewlist li.blue {
+            color: #0000FF;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="vechilereport">
+            <h1>
+                VEHICLE INSPECTION REPORT
+            </h1>
+        </div>
+        <div class="logo">
+            <img src="./images/logo .png" alt="Solwer Logo" width="200">
+        </div>
+    </div>
+    <h2 class="vehicleid">
+        Vehicle ID: KA02 DL1168
+    </h2>
+    <ul class="damagelist">
+        <li class="major">
+            Major Damage
+        </li>
+        <li class="minor">
+            Minor Damage
+        </li>
+    </ul>
+    <div class="frontback">
+        <div class="front">
+            <div class="frontbtn">
+                <p>FRONT</p>
+            </div>
+            <img src="./images/frontView.jpg" alt="front image" width="600" height="400">
+
+            <ul class="viewlist">
+                <li class="red">
+                    License Plate
+                </li>
+                <li class="red">
+                    Bonnet
+                </li>
+                <li class="blue">
+                    Left Wiper
+                </li>
+                <li class="blue">
+                    Right Fog Lamp
+                </li>
+                <li class="blue">
+                    Front Bumper
+                </li>
+            </ul>
+        </div>
+        <div class="back">
+            <div class="backbtn">
+                <p>BACK</p>
+            </div>
+            <img src="./images/backview.jpg" alt="back view image" width="600" height="400">
+            <ul class="viewlist">
+                <li class="red">
+                    Spoiler
+                </li>
+                <li class="red">
+                    Left Tail Lamp
+                </li>
+                <li class="blue">
+                    Back Bumper
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="sideview">
+        <div class="right">
+            <div class="rightbtn">
+                <p>RIGHT</p>
+            </div>
+            <img src="./images/sideview.jpg" alt="Right Side View" width="600" height="400">
+
+            <ul class="viewlist">
+                <li class="red">
+                    Rear Door Handle
+                </li>
+                <li class="blue">
+                    Driver ORVM
+                </li>
+                <li class="blue">
+                    Right Fog Lamp
+                </li>
+                <li class="blue">
+                    Right Side Footrest
+                </li>
+            </ul>
+        </div>
+        <div class="left">
+            <div class="leftbtn">
+                <p>LEFT</p>
+            </div>
+            <img src="./images/leftview.jpeg" alt="Left Side View" width="600" height="400">
+            <ul class="viewlist">
+                <li class="red">
+                    Left Co-Passenger Tyre Cap
+                </li>
+                <li class="red">
+                    Rear Door
+                </li>
+                <li class="blue">
+                    Fuel Lid
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
